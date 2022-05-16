@@ -19,11 +19,11 @@ namespace Core.Specifications
 
         public int? BrandId { get; set; }
         public int? TypeId { get; set; }
-        public string Sort { get; set; }
+        public string? Sort { get; set; }
         private string? _search;
         public string Search 
         { 
-            get => _search; 
+            get => _search != null ? _search: string.Empty; 
             set => _search = value.ToLower(); 
         }
     }
